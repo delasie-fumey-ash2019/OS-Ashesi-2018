@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/my_grep.dir/main.c.o  -o my_grep.exe -Wl,--out-implib,libmy_grep.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
