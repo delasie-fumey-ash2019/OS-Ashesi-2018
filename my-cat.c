@@ -1,21 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(int argc, char *argv[]) {
-    int n = 1;
-    for(int i = 2; i <= argc-1; i++){
-        FILE *fileRead = fopen(argv[i], "r");
+    for(int i = 1; i <= argc-1; i++){
         char line[60];
-
+        FILE *fileRead = fopen(argv[i], "r");
         if(fileRead == NULL){
             printf("cannot open file\n");
             return 1;
         }
         else{
             while(fgets(line, 60, fileRead) != NULL){
-                if(strstr(line, argv[n])){
-                    puts(line);
-                }
+                printf("%s\n", line);
             }
         }
         fclose(fileRead);
