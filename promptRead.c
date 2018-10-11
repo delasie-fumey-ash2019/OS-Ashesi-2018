@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char **promptRead(char *line){
     int bufferSize = 64, position = 0;
