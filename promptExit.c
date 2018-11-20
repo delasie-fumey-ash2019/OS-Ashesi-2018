@@ -2,5 +2,5 @@
 #include <stdio.h>
 
 int promptExit(){
-    return 1;
+    exit(0);
 }

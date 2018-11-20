@@ -1,12 +1,11 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-int promptcd(char **args){
-    if(args[1] == NULL){
-        printf("Exception: 'cd' takes just one parameter\n");
-        return -1;   
-    }else{
-        chdir(args[1]);
+void promptcd(char **args){
+
+    if(chdir(args[1]) != 0){
+        printf("%s\n", "Directory not found");
     }
-    return 0;
+   
 }
